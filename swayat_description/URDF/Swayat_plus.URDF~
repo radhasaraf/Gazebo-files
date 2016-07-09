@@ -1,0 +1,739 @@
+<robot
+  name="Swayat_plus">
+  <link
+    name="Chest">
+    <inertial>
+      <origin
+        xyz="-0.0021863767944916 0.000389011526883892 0.27809348041367"
+        rpy="0 0 0" />
+      <mass
+        value="0.458758046706296" />
+      <inertia
+        ixx="0.000523098946237096"
+        ixy="8.78437497111212E-07"
+        ixz="7.19687780172527E-06"
+        iyy="0.000513875824890433"
+        iyz="3.93144216279373E-06"
+        izz="0.000807869475320241" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Chest.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Chest.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Right Hip Yaw">
+    <inertial>
+      <origin
+        xyz="3.91070965131551E-05 0.0130439826822256 -0.0206817637978663"
+        rpy="0 0 0" />
+      <mass
+        value="0.0144774864798938" />
+      <inertia
+        ixx="1.14847231981558E-05"
+        ixy="-5.25096456367368E-08"
+        ixz="-1.2035048581476E-08"
+        iyy="2.02418263757246E-06"
+        iyz="-2.09973745724728E-08"
+        izz="1.12136097911062E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Right Hip Yaw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Right Hip Yaw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right Hip Yaw"
+    type="revolute">
+    <origin
+      xyz="0.011234 -0.037461 0.20949"
+      rpy="-3.1416 -1.1102E-16 -1.5708" />
+    <parent
+      link="Chest" />
+    <child
+      link="Right Hip Yaw" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="3.665"
+      upper="0.524"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+  <link
+    name="Right Hip Roll">
+    <inertial>
+      <origin
+        xyz="0.00321313395836065 0.0010897953419111 -0.00991129844263011"
+        rpy="0 0 0" />
+      <mass
+        value="0.00432556668339446" />
+      <inertia
+        ixx="9.75405229303591E-07"
+        ixy="-1.470579423867E-08"
+        ixz="1.78859344232371E-07"
+        iyy="1.04080815257891E-06"
+        iyz="4.02570033654804E-08"
+        izz="9.52575210528384E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Right Hip Roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Right Hip Roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right Hip Roll"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="Right Hip Yaw" />
+    <child
+      link="Right Hip Roll" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="5.2359"
+      upper="1.047"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+  <link
+    name="Right Hip Pitch">
+    <inertial>
+      <origin
+        xyz="0.0346936815732785 -4.01900734914307E-14 0.00113131138981791"
+        rpy="0 0 0" />
+      <mass
+        value="0.0111620558640124" />
+      <inertia
+        ixx="3.60701504991528E-06"
+        ixy="-4.6921390113152E-18"
+        ixz="-2.58410254235777E-07"
+        iyy="7.73644086593341E-06"
+        iyz="2.9201460856592E-19"
+        izz="5.24114704838787E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Right Hip Pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Right Hip Pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right Hip Pitch"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="Right Hip Roll" />
+    <child
+      link="Right Hip Pitch" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="4.2599"
+      upper="0.497"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+  <link
+    name="Right Knee Pitch">
+    <inertial>
+      <origin
+        xyz="0.0355558983918539 -0.00608415044661609 0.0025228560169339"
+        rpy="0 0 0" />
+      <mass
+        value="0.0246253166970604" />
+      <inertia
+        ixx="1.08052112483814E-05"
+        ixy="3.56389856427867E-06"
+        ixz="-1.54931774531241E-09"
+        iyy="3.04273445861018E-05"
+        iyz="2.65111632061903E-10"
+        izz="2.60976831342102E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Right Knee Pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Right Knee Pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right Knee Pitch"
+    type="revolute">
+    <origin
+      xyz="0.089478 0 0.00048281"
+      rpy="3.3307E-16 -1.6376E-15 -2.109E-12" />
+    <parent
+      link="Right Hip Pitch" />
+    <child
+      link="Right Knee Pitch" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="5.7246"
+      upper="2.094"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+  <link
+    name="Right Ankle Pitch">
+    <inertial>
+      <origin
+        xyz="-0.00325126413840787 -0.00992449293514189 -0.000516550202798324"
+        rpy="0 0 0" />
+      <mass
+        value="0.00432556668339446" />
+      <inertia
+        ixx="9.81566269037882E-07"
+        ixy="-1.80265751262142E-07"
+        ixz="-1.18889748283659E-08"
+        iyy="9.53871558078931E-07"
+        iyz="-5.08496466764315E-08"
+        izz="1.04522930181063E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Right Ankle Pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Right Ankle Pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right Ankle Pitch"
+    type="revolute">
+    <origin
+      xyz="0.092 0 0.00054561"
+      rpy="8.8818E-16 1.3045E-15 5.4965E-12" />
+    <parent
+      link="Right Knee Pitch" />
+    <child
+      link="Right Ankle Pitch" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="4.5378"
+      upper="1.745"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+  <link
+    name="Right Ankle Roll">
+    <inertial>
+      <origin
+        xyz="0.0235600424445296 0.0050763650870999 0.0130360371398803"
+        rpy="0 0 0" />
+      <mass
+        value="0.0286630906544186" />
+      <inertia
+        ixx="3.25315459968581E-05"
+        ixy="4.27776503434535E-07"
+        ixz="1.23434570556537E-08"
+        iyy="2.61009320486312E-05"
+        iyz="2.49642436979291E-09"
+        izz="9.23186424475584E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Right Ankle Roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Right Ankle Roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right Ankle Roll"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.5708 0 -5.5511E-17" />
+    <parent
+      link="Right Ankle Pitch" />
+    <child
+      link="Right Ankle Roll" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="4.7123"
+      upper="1.571"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+  <link
+    name="Left Hip Yaw">
+    <inertial>
+      <origin
+        xyz="0.000403937220541925 0.0130439826820519 -0.0206817637977901"
+        rpy="0 0 0" />
+      <mass
+        value="0.0144774864798938" />
+      <inertia
+        ixx="1.14847231981559E-05"
+        ixy="1.81187142312477E-08"
+        ixz="-3.10745226456518E-10"
+        iyy="2.02327283822937E-06"
+        iyz="-2.09973745725232E-08"
+        izz="1.12126999917632E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Left Hip Yaw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Left Hip Yaw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left Hip Yaw"
+    type="revolute">
+    <origin
+      xyz="0.011234 0.039543 0.20949"
+      rpy="3.1416 -1.4888E-13 -1.5708" />
+    <parent
+      link="Chest" />
+    <child
+      link="Left Hip Yaw" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="3.665"
+      upper="0.524"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+  <link
+    name="Left Hip Roll">
+    <inertial>
+      <origin
+        xyz="0.00321313395844602 -0.0008089631920217 -0.00991129844280464"
+        rpy="0 0 0" />
+      <mass
+        value="0.00432556668339447" />
+      <inertia
+        ixx="9.80677879310102E-07"
+        ixy="1.66610558994878E-08"
+        ixz="1.78859344232139E-07"
+        iyy="1.0408081525789E-06"
+        iyz="-4.58346391819426E-08"
+        izz="9.57847860534813E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Left Hip Roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Left Hip Roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left Hip Roll"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="Left Hip Yaw" />
+    <child
+      link="Left Hip Roll" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="5.2359"
+      upper="1.047"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+  <link
+    name="Left Hip Pitch">
+    <inertial>
+      <origin
+        xyz="0.0346936770453791 1.77252459931387E-05 0.00112741709217931"
+        rpy="0 0 0" />
+      <mass
+        value="0.0111620558640124" />
+      <inertia
+        ixx="3.60701612780146E-06"
+        ixy="2.10975240495953E-09"
+        ixz="-2.58410220507749E-07"
+        iyy="7.73643978804455E-06"
+        iyz="-1.32023615576981E-10"
+        izz="5.24114704838779E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Left Hip Pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Left Hip Pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left Hip Pitch"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.5708 0 2.7756E-17" />
+    <parent
+      link="Left Hip Roll" />
+    <child
+      link="Left Hip Pitch" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0.497"
+      upper="4.2599"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+  <link
+    name="Left Knee Pitch">
+    <inertial>
+      <origin
+        xyz="0.0354870161656194 0.0194919489515745 -0.0012967924264892"
+        rpy="0 0 0" />
+      <mass
+        value="0.0246253166970604" />
+      <inertia
+        ixx="1.0800704143639E-05"
+        ixy="-3.55702249204545E-06"
+        ixz="1.35807698535455E-09"
+        iyy="3.04301400351007E-05"
+        iyz="-4.16230973293111E-09"
+        izz="2.60959714784666E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Left Knee Pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Left Knee Pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left Knee Pitch"
+    type="revolute">
+    <origin
+      xyz="0.089544 -0.013381 0.004295"
+      rpy="-3.3307E-16 1.4894E-13 7.0083E-06" />
+    <parent
+      link="Left Hip Pitch" />
+    <child
+      link="Left Knee Pitch" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="2.094"
+      upper="5.7246"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+  <link
+    name="Left Ankle Pitch">
+    <inertial>
+      <origin
+        xyz="-0.00319663085603158 0.00991129844255317 0.00252294901021775"
+        rpy="0 0 0" />
+      <mass
+        value="0.00432556668339446" />
+      <inertia
+        ixx="9.75405229296585E-07"
+        ixy="1.79359845227328E-07"
+        ixz="-1.90384430041769E-08"
+        iyy="9.52738879873719E-07"
+        iyz="4.0257003365211E-08"
+        izz="1.04097182191722E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Left Ankle Pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Left Ankle Pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left Ankle Pitch"
+    type="revolute">
+    <origin
+      xyz="0.091934 0.013426 -0.0064617"
+      rpy="1.2768E-15 2.0262E-15 -7.0083E-06" />
+    <parent
+      link="Left Knee Pitch" />
+    <child
+      link="Left Ankle Pitch" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="1.745"
+      upper="4.5378"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+  <link
+    name="Left Ankle Roll">
+    <inertial>
+      <origin
+        xyz="0.0235844024159797 -0.000221882035345511 0.010338944791498"
+        rpy="0 0 0" />
+      <mass
+        value="0.0286630906544186" />
+      <inertia
+        ixx="3.24224777208369E-05"
+        ixy="-3.32353013416854E-07"
+        ixz="-2.1100172385649E-07"
+        iyy="2.61023036367036E-05"
+        iyz="1.69060382964847E-07"
+        izz="9.12489187788679E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Left Ankle Roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Swayat_plus/meshes/Left Ankle Roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left Ankle Roll"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 -8.3267E-17 0" />
+    <parent
+      link="Left Ankle Pitch" />
+    <child
+      link="Left Ankle Roll" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="4.7123"
+      upper="1.571"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+</robot>

@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+<model>
+  <name>asphalt</name>
+  <version>1.0.0</version>
+  <author>
+    <name>ivlabians</name>
+    <email>ivlabsvnit2018@gmail.com</email>
+  </author>
+  <sdf>URDF/asphalt.URDF</sdf>
+  <description>humanoid robot</description>
+</model>

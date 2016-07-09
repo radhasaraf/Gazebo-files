@@ -1,0 +1,9 @@
+<model>
+<name>swayat</name>
+<version>1.0.0</version>
+<author>
+<name>ivlabians</name>
+<email>ivlabsvnit2018@gmail.com</email>
+</author>
+<sdf>urdf/swayat.urdf</sdf>
+<description>humanoid robot</description></model>

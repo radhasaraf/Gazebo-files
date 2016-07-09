@@ -1,0 +1,6 @@
+<package>
+  <description brief="Swayat_plus">Swayat_plus</description>
+  <depend package="gazebo" />
+  <author>me</author>
+  <license>BSD</license>
+</package>
